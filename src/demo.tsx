@@ -1,19 +1,10 @@
 import * as React from 'react';
 import {useEffect, useState} from "react";
-import { RWebShare } from "react-web-share";
 import MoreVert from "./moreVert.tsx";
 
 const shareFunction = ({handleClick, handleClose, open, anchorEl}) => {
     return (
         <div>
-            <RWebShare
-                data={{
-                    text: "喜欢分享什么",
-                    url: "https://huarenfuwu.com",
-                    title: "Spread the word about huarenfuwu"
-                }}
-                // onClick={() => console.info("share successful!")}
-            >
                {/*<MoreVertIcon></MoreVertIcon>*/}
 
                 <MoreVert
@@ -24,8 +15,6 @@ const shareFunction = ({handleClick, handleClose, open, anchorEl}) => {
                 >
 
                 </MoreVert>
-
-            </RWebShare>
         </div>
     );
 };

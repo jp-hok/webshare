@@ -3,6 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { RWebShare } from "react-web-share";
 
 const options = [
     'Wechat'
@@ -43,6 +44,15 @@ export default function moreVert({handleClick, handleClose, open, anchorEl}) {
                 {option}
             </MenuItem>
         ))}
+        <RWebShare
+          data={{
+            text: "喜欢分享什么",
+            url: "https://huarenfuwu.com",
+            title: "Spread the word about huarenfuwu",
+          }}
+        >
+          <MenuItem key="share">Share</MenuItem>
+        </RWebShare>
     </Menu>
         </div>
     )
